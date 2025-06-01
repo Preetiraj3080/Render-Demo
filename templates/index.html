@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Placement Prediction</title>
+</head>
+<body>
+    <h2>Student Placement Prediction</h2>
+    <form method="POST" action="/predict">
+        <label for="cgpa">CGPA:</label><br>
+        <input type="text" id="cgpa" name="cgpa" required><br><br>
+
+        <label for="exam_marks">Placement Exam Marks:</label><br>
+        <input type="text" id="exam_marks" name="exam_marks" required><br><br>
+
+        <input type="submit" value="Check Placement">
+    </form>
+
+    {% if result %}
+    <h3>Result: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
